@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XV - Yaritssa</title>
+<style>
+html,body{margin:0;background:#dce8f1;height:100%;display:flex;justify-content:center;align-items:center}
+body{font-family:Georgia,serif}
+.card{position:relative;max-width:720px;width:100%;height:100vh;overflow:hidden;background:#dce8f1}
+.card img{width:100%;height:100%;object-fit:contain}
+.actions{position:absolute;left:50%;transform:translateX(-50%);bottom:5%;display:flex;flex-direction:column;gap:9px;align-items:center;width:90%}
+.button{display:block;padding:12px 22px;border-radius:30px;background:rgba(83,105,124,.90);color:white;text-decoration:none;font-size:16px;box-shadow:0 3px 15px #7b8c99;text-align:center;min-width:190px}
+.confirm{background:rgba(111,126,143,.94)}
+.hint{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.8);padding:7px 12px;border-radius:20px;font-size:13px;color:#405468}
+</style>
+</head>
+<body>
+<div class="card">
+<img src="invitacion.png" alt="Invitación XV de Yaritssa">
+<div class="hint">Toca la pantalla para escuchar ✨</div>
+<div class="actions">
+<a class="button" href="https://maps.app.goo.gl/wRkQMSMz8bCPcfem6" target="_blank">📍 Ver ubicación</a>
+<a class="button confirm" href="https://wa.me/51974569637?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20de%20Yaritssa." target="_blank">💌 Confirmar asistencia</a>
+</div>
+<audio id="audio" preload="auto" loop>
+<source src="musica-instrumental.wav" type="audio/wav">
+</audio>
+</div>
+<script>
+const a=document.getElementById('audio');
+document.body.addEventListener('click',()=>{a.play().catch(()=>{})},{once:true});
+</script>
+</body>
+</html>
